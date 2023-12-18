@@ -1,0 +1,216 @@
+# Anotações sobre Assembly
+
+## Introdução
+
+## O que é Assembly?
+
+- Assembly é uma linguagem de programação de baixo nível que permite ao programador ter controle total sobre o hardware do computador.
+- Composta por mnemônicos, que são códigos que representam instruções de máquina.
+- Cada instrução é traduzida para uma instrução de máquina, que é um código binário que o processador entende.
+
+Exemplo:
+
+mov eax, 0x45 ; move o valor 0x45 para o registrador eax / O valor 0x45 é traduzido para 01000101, escrito em hexadecimal. Eax é o registrador de dados de 32 bits.
+
+- O código acima é traduzido para o seguinte código binário:
+
+- 10110000 01000101
+
+- Existe um mnemônico para cada instrução de máquina.
+
+- As bases são decimal, hexadecimal e octal.
+
+- O código Assembly é traduzido para código de máquina por um programa chamado Assembler.
+
+- A maioria dos computadores atuais não conseguem entender 16 bits de uma vez, então o código Assembly é traduzido para código de máquina de 32 ou 64 bits.
+
+- O código Assembly é composto por 3 seções:
+
+    - Seção de dados: onde são declaradas as variáveis e constantes.
+    - Seção de texto: onde são declaradas as instruções.
+    - Seção de comentários: onde são declarados os comentários.
+
+    - Os bootloaders dos S.O rodam em 16 bits e são escritos em Assembly.
+
+## Existem vários tipos de Assembly
+
+- Cada processador tem sua própria linguagem Assembly.
+
+- Exemplos:
+
+    - x86
+    - x86-64
+    - ARM
+    - MIPS
+
+## Estrutura básica de um programa Assembly
+
+## Registradores
+
+- Registradores são pequenas memórias dentro do processador que são usadas para armazenar dados temporariamente.
+
+- Tipos de registradores:
+
+        - Registradores de dados: usados para armazenar dados.
+        - Registradores de endereço: usados para armazenar endereços de memória.
+        - Registradores de segmento: usados para armazenar endereços de segmentos de memória.
+        - Registradores de ponteiros: usados para armazenar endereços de memória.
+        - Registradores de índice: usados para armazenar índices de memória.
+        - Registradores de instrução: usados para armazenar instruções de máquina.
+        - Registradores de flags: usados para armazenar flags de condição.
+
+- EAX (Extended Accumulator): registrador de dados de 32 bits, usado para armazenar dados temporariamente.
+- EBX (Extended Base): registrador de dados de 32 bits, usado para armazenar dados temporariamente.
+- ECX (Extended Counter): registrador de dados de 32 bits, usado para armazenar dados temporariamente.
+- EDX (Extended Data): registrador de dados de 32 bits, usado para armazenar dados temporariamente.
+- ESI (Extended Source Index): registrador de dados de 32 bits, usado para armazenar dados temporariamente.
+- EDI (Extended Destination Index): registrador de dados de 32 bits, usado para armazenar dados temporariamente.
+- ESP (Extended Stack Pointer): registrador de dados de 32 bits, usado para armazenar dados temporariamente.
+- EBP (Extended Base Pointer): registrador de dados de 32 bits, usado para armazenar dados temporariamente.
+- EIP (Extended Instruction Pointer): registrador de instrução de 32 bits, usado para armazenar instruções de máquina.
+- EFLAGS (Extended Flags): registrador de flags de 32 bits, usado para armazenar flags de condição.
+
+
+## Sintaxe do Assembly
+
+- O Assembly é case sensitive.
+
+- [label:] instruction [operands] [;comment]
+
+- De forma geral, os operandos podem ser:
+        
+            - Registradores (32 bits, 8 bits, 16 bits, 64 bits)
+            - Endereços de memória
+            - Constantes
+
+
+## Instruções básicas do Assembly
+
+- As instruções básicas do Assembly são categorizadas em três tipos:
+
+        - Movimentação de dados
+        - Lógica e aritmética
+        - Instruções e Controles de fluxo
+
+
+
+## Como funcionam as instruções básicas de movimentação de dados:
+        
+        - MOV: move dados de um lugar para outro.
+        - PUSH: empurra dados para a pilha.
+        - POP: retira dados da pilha.
+        - XCHG: troca dados entre dois registradores.
+        - LEA: carrega o endereço de memória de um operando para um registrador.
+
+        Exemplos da sintaxe MOV: Para mover dados de um lugar para outro.
+
+        - mov <registrador>, <registrador>
+        - mov <registrador>, <memória>
+        - mov <memória>
+        - mov <memória>, <constante>
+
+        Exemplos da sintaxe PUSH: Para empurrar dados para a pilha.
+
+        - push <reg32> ; empurra o valor do registrador de 32 bits para a pilha.
+        - push <reg16> ; empurra o valor do registrador de 16 bits para a pilha.
+        - push <reg8> ; empurra o valor do registrador de 8 bits para a pilha.
+
+        Exemplos da sintaxe POP: Para retirar dados da pilha.
+
+        - pop <reg32> ; retira o valor do registrador de 32 bits da pilha.
+        - pop <reg16> ; retira o valor do registrador de 16 bits da pilha.
+        - pop <reg8> ; retira o valor do registrador de 8 bits da pilha.
+
+        Exemplo LEA: Para carregar o endereço de memória de um operando para um registrador. Lea é uma sigla para Load Effective Address.
+
+        - lea <registrador>, <memória>
+        - lea <registrador>, <registrador>
+        - lea <registrador>, <constante>
+
+
+
+*Todas as instruções em Assembly têm uma ligação com palavras em inglês, por isso é importante saber inglês para programar em Assembly.*
+
+
+## Instruções básicas de lógica e aritmética:
+
+- As instruções básicas de lógica e aritmética são usadas para realizar operações matemáticas e lógicas.
+
+        - add <destino>, <fonte> ; adiciona o valor da fonte ao valor do destino.
+        - sub <destino>, <fonte> ; subtrai o valor da fonte do valor do destino.
+        - inc <operando> ; incrementa o valor do operando em 1.
+        - dec <operando> ; decrementa o valor do operando em 1.
+        - mul <operando> ; multiplica o valor do operando pelo valor do registrador eax.
+        - imul <operando> ; multiplica o valor do operando pelo valor do registrador eax e armazena o resultado no registrador eax.
+        - idiv <operando> ; divide o valor do registrador eax pelo valor do operando e armazena o resultado no registrador eax.
+        - and <destino>, <fonte> ; realiza a operação AND entre o valor do destino e o valor da fonte.
+        - or <destino>, <fonte> ; realiza a operação OR entre o valor do destino e o valor da fonte.
+        - xor <destino>, <fonte> ; realiza a operação XOR entre o valor do destino e o valor da fonte.
+        - not <operando> ; realiza a operação NOT no valor do operando.
+        - neg <operando> ; realiza a operação NEG no valor do operando.
+        - shl <operando>, <constante> ; realiza a operação de shift left no valor do operando.
+        - shr <operando>, <constante> ; realiza a operação de shift right no valor do operando.
+
+## Instruções básicas de controle de fluxo:
+
+- As instruções básicas para controle de fluxo são pautados nos seguintes mnemônicos:
+
+    - jmp: salta para um endereço de memória. jmp é uma sigla para jump. Ou seja, pule para um endereço de memória.
+
+    - je: salta se a flag ZF estiver setada. je é uma sigla para jump if equal. Ou seja, pule se for igual.
+    
+    - jne: salta se a flag ZF não estiver setada. jne é uma sigla para jump if not equal. Ou seja, pule se não for igual.
+    
+    - jg: salta se a flag ZF não estiver setada e a flag SF for igual a flag OF. jg é uma sigla para jump if greater. Ou seja, pule se for maior.
+    
+    - jge: salta se a flag SF for igual a flag OF. jge é uma sigla para jump if greater or equal. Ou seja, pule se for maior ou igual.
+    
+    - jl: salta se a flag SF for diferente da flag OF. jl é uma sigla para jump if less. Ou seja, pule se for menor.
+    
+    - jle: salta se a flag ZF estiver setada ou a flag SF for diferente da flag OF. jle é uma sigla para jump if less or equal. Ou seja, pule se for menor ou igual.
+
+    - cmp <operando>, <operando> ; compara os valores dos operandos e seta as flags de acordo com o resultado da comparação.
+    
+    - call <endereço de memória> ; chama uma sub-rotina.
+    
+    - ret ; retorna de uma sub-rotina.
+    
+    
+    - Exemplo de sintaxe:
+
+        - jmp <endereço de memória>
+        - je <endereço de memória>
+        - jne <endereço de memória>
+        - jg <endereço de memória>
+        - jge <endereço de memória>
+        - jl <endereço de memória>
+        - jle <endereço de memória>
+
+
+ ## As Seções do Código Assembly:
+
+    - As seções do código Assembly são:
+    
+            - Seção de dados: onde são declaradas as variáveis e constantes.
+            - Seção de texto: onde são declaradas as instruções.
+            - Seção de comentários: onde são declarados os comentários.
+
+    - As seções são as menores partes que um programa se divide.
+    - As seções podem ter:
+        - Textos executados pelo processador.
+        - Dados-readonly que são usados pelo programa.
+        - dados read-write, que são usados pelo programa.
+        - dados nao-inicializados.
+
+
+## Acesso à memória
+
+## Sub-rotinas
+
+## Diretivas e macros
+
+## Exemplos de código
+
+## Conclusão
+
+```

@@ -1,0 +1,7 @@
+numeros = list(range(1, 101))
+
+with open('output.txt', 'w') as file:
+    for numero in numeros:
+        file.write(str(numero) + '\n')
+
+print("Output generated in output.txt")

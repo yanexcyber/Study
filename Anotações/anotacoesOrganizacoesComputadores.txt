@@ -1,0 +1,40 @@
+# Anotações sobre Organização e Estrutura de Computadores
+
+## Evolução dos Computadores - Geração 0
+
+- No Ano de 1600, a Geração 0 de Computadores era composta por **Máquinas de Calcular**. Conhecida como Abácos e Régua de Cálculo.
+
+- No Ano de 1645, Blaise Pascal criou a **Pascaline**. Uma máquina de calcular que fazia operações de soma e subtração.
+
+- No ano de 1700 Gottfried Leibniz criou a **Leibniz**. Uma máquina de calcular que fazia operações de soma, subtração, multiplicação e divisão. Essa máquina
+    foi a primeira a ter um sistema de engrenagens. E se chamava **Stepped Reckoner**.
+
+- No ano de 1822 Charles Babbage criou a **Máquina Diferencial**. Uma máquina que fazia cálculos de tabelas matemáticas. Essa máquina foi a primeira a ter um sistema
+    de cartões perfurados. Sua função era calcular tabelas matemáticas e funções polinomiais.
+
+- No ano de 1833 Charles Babbage criou a **Máquina Analítica**. Uma máquina que fazia cálculos de tabelas matemáticas e funções polinomiais. Essa máquina foi a primeira
+    a ter um sistema de cartões perfurados. Sua função era calcular tabelas matemáticas e funções polinomiais.
+
+## Evolução dos Computadores - Geração 1
+
+- No Ano de 1943, é criado o **Colossus**. O primeiro computador eletrônico digital. Foi criado para decifrar códigos alemães durante a Segunda Guerra Mundial. Foi um computador valvulado.
+
+- No Ano de 1946, é criado o **ENIAC**. O primeiro computador eletrônico digital de propósito geral. Foi criado para calcular trajetórias de artilharia durante a Segunda Guerra Mundial. Foi um computador valvulado.
+    Possuia 18.000 válvulas, 70.000 resistores, 10.000 capacitores, 6.000 chaves e 1.500 relés. Pesava 30 toneladas e ocupava uma área de 167 m². Seu consumo era de 150 kW. Seu custo foi de 500 mil dólares.
+
+- Em 1943, é criado o EDVAC. O primeiro computador eletrônico digital de propósito geral. Foi criado para calcular trajetórias de artilharia durante a Segunda Guerra Mundial. Foi um computador valvulado.
+
+## Evolução dos Computadores - Geração 2
+
+- A partir de 1947, é criado o **Transistor**. O primeiro componente eletrônico semicondutor. Foi criado para substituir as válvulas. Foi criado pela Bell Labs.
+    - Possuem propriedades condutoras de diodos e resistores.
+    - A capacidade de desligar e ligar a corrente elétrica.
+    - Utilizam menos energia.
+    - Geravam menos calor.
+
+- Como um Transistor é muito menor que uma válvula, foi possível criar computadores menores e mais rápidos. A partir de 1951, é criado o **UNIVAC I**. O primeiro computador comercial. Foi criado para calcular o censo dos Estados Unidos. Foi um computador valvulado. 
+
+
+## Evolução de Computadores - Geração 3
+
+- A partir de 1958, é criado o **Circuito Integrado**. Jack Kilby criou o primeiro circuito integrado, conhecido como microchip em germânio.
