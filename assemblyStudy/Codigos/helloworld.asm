@@ -18,10 +18,18 @@ global _start
 _start:
     mov eax, 0x04 ;movendo o valor 4 para o registrador eax
     mov ebx, 0x01 ;movendo o valor 1 para o registrador ebx
+    mov ecx, msg  ;movendo o valor da variável msg para o registrador ecx
+    mov edx, len  ;movendo o tamanho da variável len para o registrador edx
+    int 0x80      ;chamando a interrupção 0x80 para executar a função de escrever na tela, o porque disso é porque o kernel do S.O é quem tem acesso ao hardware.
+
+
+
 
 
 ;Criando uma nova seção para o código de máquina, a seção de dados;
 
 section .data
     msg db 'Hello, World!', 0x0a ;db = define byte, e 0x0a é o código de máquina para pular uma linha
-    
+    len equ $ - msg ;equ = equate, e $ é o endereço de memória atual, e o menos msg é para calcular o tamanho da string
+                    ;O que o código faz é calcular o tamanho da string menos o tamanho do endereço de memória atual, para saber quantos bytes a string ocupa na memória
+                    ;Se movermos uma string para um endereço de memória da utilizando, isso irá sobrepor o código de máquina que está naquele endereço de memória
