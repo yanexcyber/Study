@@ -21,7 +21,12 @@ _start:
     mov ecx, msg  ;movendo o valor da variável msg para o registrador ecx
     mov edx, len  ;movendo o tamanho da variável len para o registrador edx
     int 0x80      ;chamando a interrupção 0x80 para executar a função de escrever na tela, o porque disso é porque o kernel do S.O é quem tem acesso ao hardware.
+    
 
+    mov eax, 0x01 ;movendo o valor 1 para o registrador eax para fechar o programa
+    mov edx, 0x00 ;movendo o valor 0 para o registrador edx pois não temos nada para passar para o kernel do S.O
+    int 0x80      ;chamando a interrupção 0x80 para executar a função de fechar o programa
+    
 
 
 
