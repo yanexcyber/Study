@@ -27,7 +27,7 @@ mov ecx, msg2 ;Mova a mensagem para o registrador ecx
 mov ebx, 1    ;Mova o valor 1 para o registrador ebx
 mov eax, 4    ;Mova o valor 4 para o registrador eax
 int 0x80      ;Chame o sistema operacional
-jmp fim       ;Pule para o fim
+jne fim       ;Pule para o fim
 
 
 fim:
