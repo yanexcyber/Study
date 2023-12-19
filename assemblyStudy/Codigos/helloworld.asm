@@ -41,5 +41,5 @@ section .data
     len equ $ - msg ;equ = equate, e $ é o endereço de memória atual, e o menos msg é para calcular o tamanho da string
                     ;O que o código faz é calcular o tamanho da string menos o tamanho do endereço de memória atual, para saber quantos bytes a string ocupa na memória
                     ;Se movermos uma string para um endereço de memória já utilizado, ele será sobrescrito, então, temos que saber o tamanho da string para não sobrescrevermos a memória.
-
+                    ;Ao sobrescrever um programa em assembly. Quando finalizamos a instrução ela é sobrescrita. Como um sistema de stacks 
 

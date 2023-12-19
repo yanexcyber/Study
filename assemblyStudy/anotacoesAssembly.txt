@@ -61,7 +61,7 @@ mov eax, 0x45 ; move o valor 0x45 para o registrador eax / O valor 0x45 é tradu
 
 - EAX (Extended Accumulator): registrador de dados de 32 bits, usado para armazenar dados temporariamente.
 - EBX (Extended Base): registrador de dados de 32 bits, usado para armazenar dados temporariamente.
-- ECX (Extended Counter): registrador de dados de 32 bits, usado para armazenar dados temporariamente.
+- ECX (Extended Counter): registrador de dados de 32 bits, usado para armazenar dados temporariamente. Usado para stout.
 - EDX (Extended Data): registrador de dados de 32 bits, usado para armazenar dados temporariamente.
 - ESI (Extended Source Index): registrador de dados de 32 bits, usado para armazenar dados temporariamente.
 - EDI (Extended Destination Index): registrador de dados de 32 bits, usado para armazenar dados temporariamente.
