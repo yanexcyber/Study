@@ -1,5 +1,5 @@
-section .text
-global _start
+section .text ;Seção de texto
+global _start ;Função principal
 
 _start:
 
