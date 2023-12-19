@@ -37,4 +37,7 @@ section .data
     msg db 'Hello, World!', 0x0a ;db = define byte, e 0x0a é o código de máquina para pular uma linha
     len equ $ - msg ;equ = equate, e $ é o endereço de memória atual, e o menos msg é para calcular o tamanho da string
                     ;O que o código faz é calcular o tamanho da string menos o tamanho do endereço de memória atual, para saber quantos bytes a string ocupa na memória
-                    ;Se movermos uma string para um endereço de memória da utilizando, isso irá sobrepor o código de máquina que está naquele endereço de memória
+                    ;Se movermos uma string para um endereço de memória já utilizado, ele será sobrescrito, então, temos que saber o tamanho da string para não sobrescrevermos a memória.
+
+
+                    
